@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="128972" started-at="2021-01-18T09:19:24Z" finished-at="2021-01-18T09:21:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="128972" started-at="2021-01-18T09:19:24Z" finished-at="2021-01-18T09:21:33Z">
+      <class name="com.qa.nsprocess.EmployeeCreation">
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="setExtent" is-config="true" duration-ms="312" started-at="2021-01-18T09:19:24Z" finished-at="2021-01-18T09:19:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="setUp" is-config="true" duration-ms="16156" started-at="2021-01-18T09:19:25Z" finished-at="2021-01-18T09:19:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="employee_invalid_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="employee_invalid_validations" duration-ms="46883" started-at="2021-01-18T09:19:41Z" data-provider="employee_invalid_validations" finished-at="2021-01-18T09:20:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sindhuja1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sindhu]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- employee_invalid_validations -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="tearDown" is-config="true" duration-ms="798" started-at="2021-01-18T09:20:28Z" finished-at="2021-01-18T09:20:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=employee_invalid_validations status=SUCCESS method=EmployeeCreation.employee_invalid_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="setUp" is-config="true" duration-ms="14429" started-at="2021-01-18T09:20:29Z" finished-at="2021-01-18T09:20:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="employee_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="employee_validations" duration-ms="43711" started-at="2021-01-18T09:20:43Z" data-provider="employee_validations" finished-at="2021-01-18T09:21:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sindhuja1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Abhishek Dutta]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1234567]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1234567]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- employee_validations -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="tearDown" is-config="true" duration-ms="791" started-at="2021-01-18T09:21:27Z" finished-at="2021-01-18T09:21:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=employee_validations status=SUCCESS method=EmployeeCreation.employee_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="endReport" is-config="true" duration-ms="4953" started-at="2021-01-18T09:21:28Z" finished-at="2021-01-18T09:21:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.qa.nsprocess.EmployeeCreation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
