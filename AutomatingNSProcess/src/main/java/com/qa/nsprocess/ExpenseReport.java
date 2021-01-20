@@ -99,7 +99,7 @@ public class ExpenseReport extends TestBase {
 	@Test(dataProvider = "invalid_data",priority = 1)
 	public void expense_report_validation_using_invalid_data(String employee,String category,String currency,String rate) throws InterruptedException
 	{
-			test=extent.createTest("So validating using invalid data");
+			test=extent.createTest("Employee validation using invalid data");
 			expense=new Expense_report_functions();
 			expense.invalid_data_validation(employee, category, currency, rate, test);
 			
