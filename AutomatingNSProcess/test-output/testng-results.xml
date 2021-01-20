@@ -2,122 +2,172 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="128972" started-at="2021-01-18T09:19:24Z" finished-at="2021-01-18T09:21:33Z">
+  <suite name="Default suite" duration-ms="840869" started-at="2021-01-20T14:59:59Z" finished-at="2021-01-20T15:14:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="128972" started-at="2021-01-18T09:19:24Z" finished-at="2021-01-18T09:21:33Z">
-      <class name="com.qa.nsprocess.EmployeeCreation">
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="setExtent" is-config="true" duration-ms="312" started-at="2021-01-18T09:19:24Z" finished-at="2021-01-18T09:19:24Z">
+    <test name="Default test" duration-ms="840869" started-at="2021-01-20T14:59:59Z" finished-at="2021-01-20T15:14:00Z">
+      <class name="com.qa.nsprocess.SOProcess">
+        <test-method status="PASS" signature="setExtent()[pri:0, instance:com.qa.nsprocess.SOProcess@6adede5]" name="setExtent" is-config="true" duration-ms="291" started-at="2021-01-20T14:59:59Z" finished-at="2021-01-20T14:59:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setExtent -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="setUp" is-config="true" duration-ms="16156" started-at="2021-01-18T09:19:25Z" finished-at="2021-01-18T09:19:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.nsprocess.SOProcess@6adede5]" name="setUp" is-config="true" duration-ms="17436" started-at="2021-01-20T15:00:00Z" finished-at="2021-01-20T15:00:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="employee_invalid_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="employee_invalid_validations" duration-ms="46883" started-at="2021-01-18T09:19:41Z" data-provider="employee_invalid_validations" finished-at="2021-01-18T09:20:28Z">
+        <test-method status="PASS" signature="So_process(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.SOProcess@6adede5]" name="So_process" duration-ms="703563" started-at="2021-01-20T15:00:18Z" data-provider="So_process" finished-at="2021-01-20T15:12:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[sindhuja1]]>
+                <![CDATA[sindhuja chinnareddy]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[test1]]>
+                <![CDATA[Inventory Using Bins,Non_inv_item,Assembly 1]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[sindhu]]>
+                <![CDATA[1,1,1]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[abc]]>
+                <![CDATA[100,100,100]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1234]]>
+                <![CDATA[SO creation for customer Sindhuja]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[1234]]>
+                <![CDATA[Banglore]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[100,100,100]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1% 10 Net 30]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[15 % Discount]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[sindhu34]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[1234567]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Sushma G]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[More]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[5% Tax]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[cash]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Dvaraka]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- employee_invalid_validations -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="tearDown" is-config="true" duration-ms="798" started-at="2021-01-18T09:20:28Z" finished-at="2021-01-18T09:20:29Z">
+        </test-method> <!-- So_process -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.nsprocess.SOProcess@6adede5]" name="tearDown" is-config="true" duration-ms="1109" started-at="2021-01-20T15:12:01Z" finished-at="2021-01-20T15:12:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=employee_invalid_validations status=SUCCESS method=EmployeeCreation.employee_invalid_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5] output={null}]]]>
+                <![CDATA[[TestResult name=So_process status=SUCCESS method=SOProcess.So_process(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.SOProcess@6adede5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="setUp" is-config="true" duration-ms="14429" started-at="2021-01-18T09:20:29Z" finished-at="2021-01-18T09:20:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.nsprocess.SOProcess@6adede5]" name="setUp" is-config="true" duration-ms="20388" started-at="2021-01-20T15:12:02Z" finished-at="2021-01-20T15:12:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="employee_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="employee_validations" duration-ms="43711" started-at="2021-01-18T09:20:43Z" data-provider="employee_validations" finished-at="2021-01-18T09:21:27Z">
+        <test-method status="PASS" signature="so_Validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.qa.nsprocess.SOProcess@6adede5]" name="so_Validations" duration-ms="90710" started-at="2021-01-20T15:12:23Z" data-provider="SO_validations" finished-at="2021-01-20T15:13:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[sindhuja1]]>
+                <![CDATA[sindhuuuuu]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[test2]]>
+                <![CDATA[inventory_using_bin_items]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Abhishek Dutta]]>
+                <![CDATA[-1]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[abc@gmail.com]]>
+                <![CDATA[Nizamabad]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[1234567]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[1234567]]>
+                <![CDATA[Net 120]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- employee_validations -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="tearDown" is-config="true" duration-ms="791" started-at="2021-01-18T09:21:27Z" finished-at="2021-01-18T09:21:28Z">
+        </test-method> <!-- so_Validations -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.nsprocess.SOProcess@6adede5]" name="tearDown" is-config="true" duration-ms="1324" started-at="2021-01-20T15:13:54Z" finished-at="2021-01-20T15:13:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=employee_validations status=SUCCESS method=EmployeeCreation.employee_validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.nsprocess.EmployeeCreation@6adede5] output={null}]]]>
+                <![CDATA[[TestResult name=so_Validations status=SUCCESS method=SOProcess.so_Validations(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.qa.nsprocess.SOProcess@6adede5] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.qa.nsprocess.EmployeeCreation@6adede5]" name="endReport" is-config="true" duration-ms="4953" started-at="2021-01-18T09:21:28Z" finished-at="2021-01-18T09:21:33Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.qa.nsprocess.SOProcess@6adede5]" name="endReport" is-config="true" duration-ms="5128" started-at="2021-01-20T15:13:55Z" finished-at="2021-01-20T15:14:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- com.qa.nsprocess.EmployeeCreation -->
+      </class> <!-- com.qa.nsprocess.SOProcess -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

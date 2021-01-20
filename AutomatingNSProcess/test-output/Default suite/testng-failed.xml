@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.nsprocess.VendorCreation">
+      <class name="com.qa.nsprocess.SOProcess">
         <methods>
-          <include name="endReport"/>
+          <include name="So_process"/>
           <include name="setExtent"/>
-          <include name="setUp"/>
-          <include name="vendor_validations"/>
           <include name="tearDown"/>
-          <include name="vendor_invalid_validations"/>
+          <include name="setUp"/>
+          <include name="so_Validations"/>
+          <include name="endReport"/>
         </methods>
-      </class> <!-- com.qa.nsprocess.VendorCreation -->
+      </class> <!-- com.qa.nsprocess.SOProcess -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,7 +16,7 @@ public class TestBase {
 		try
 		{
 			prop=new Properties();
-			FileInputStream fis=new FileInputStream("C:\\Users\\Sindhuja\\git\\NetsuiteProcessAutomation\\AutomatingNSProcess\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream fis=new FileInputStream("D:\\Process\\AutomatingNSProcess\\src\\main\\java\\com\\qa\\config\\config.properties");
 			prop.load(fis);
 		}
 		catch(IOException e)
