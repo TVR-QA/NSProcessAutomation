@@ -3,16 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.nsprocess.SOProcess">
+      <class name="com.qa.nsprocess.EmployeeCreation">
         <methods>
-          <include name="So_process"/>
-          <include name="setExtent"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="so_Validations"/>
+          <include name="tearDown"/>
           <include name="endReport"/>
+          <include name="setExtent"/>
+          <include name="employee_validations"/>
         </methods>
-      </class> <!-- com.qa.nsprocess.SOProcess -->
+      </class> <!-- com.qa.nsprocess.EmployeeCreation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,7 +9,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -17,6 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.exceldataReader.ExcelReader;
+import com.qa.exceldataReader.ExcelReaderbycolumnname;
 import com.qa.functions.vendorFunctions;
 import com.qa.pages.AuthPage;
 import com.qa.util.TestBase;
@@ -30,7 +30,8 @@ import com.qa.util.TestBase;
 		ExtentTest test;
 		vendorFunctions vendor;
 		AuthPage authpage;
-
+		String file_name_="C:\\Users\\Sindhuja\\Desktop\\Vendor_data.xlsx";
+		
 		public void send_email() throws EmailException
 		{
 			EmailAttachment attachment = new EmailAttachment();
@@ -87,32 +88,40 @@ import com.qa.util.TestBase;
 			testUtil = new TestUtil();
 			testUtil.setUp();
 		}
-		@DataProvider
-		public Object[][] vendor_invalid_validations() throws IOException {
-			reader = new ExcelReader();
-			return reader.readExcelData("C:\\Users\\Sindhuja\\Desktop\\Vendor_data.xlsx", 1);
-		}
-		@Test(dataProvider = "vendor_invalid_validations",priority=1)
-		public void vendor_invalid_validations(String company_name,String firstname,String last_name,String email,String phone,String fax,String currency,String terms) throws InterruptedException
+		@Test
+		public void  vendor_validations() throws IOException, InterruptedException
 		{
-			
+
+			ExcelReaderbycolumnname reader=new ExcelReaderbycolumnname();
+			String [] company_name=reader.excelReader(file_name_, 0, "company_name");
+			String [] first_name=reader.excelReader(file_name_, 0, "first_name");
+			String [] last_name=reader.excelReader(file_name_, 0, "last_name");
+			String [] email=reader.excelReader(file_name_, 0, "email");
+			String [] phone=reader.excelReader(file_name_, 0, "phone");
+			String [] fax=reader.excelReader(file_name_, 0, "fax");
+			String [] currency=reader.excelReader(file_name_, 0, "currency");
+			String [] terms=reader.excelReader(file_name_, 0, "terms");
+			String[] type=reader.excelReader(file_name_, 0, "Type");
+			for(int i=0;i<currency.length;i++)
+			{
+			if(type[i].equals("invalid"))
+			{
 			test=extent.createTest("Vendor creation with invalid data");
 			authpage=new AuthPage();
 			vendor=new vendorFunctions();
-			vendor.vendor_invalid_validations(company_name, firstname, last_name, email, phone, fax, currency, terms, test);
-		}
-		@DataProvider
-		public Object[][] vendor_validations() throws IOException {
-			reader = new ExcelReader();
-			return reader.readExcelData("C:\\Users\\Sindhuja\\Desktop\\Vendor_data.xlsx", 0);
-		}
-		@Test(dataProvider = "vendor_validations",priority=2)
-		public void vendor_validations(String company_name,String firstname,String last_name,String email,String phone,String fax,String currency,String terms) throws InterruptedException
-		{
-			
+			vendor.vendor_invalid_validations(company_name[i], first_name[i], last_name[i], email[i], phone[i], fax[i], currency[i], terms[i],test);
+			}
+			else
+			{
 			test=extent.createTest("Vendor creation with giving valid data and without giving data");
 			authpage=new AuthPage();
 			vendor=new vendorFunctions();
-			vendor.vendor_validations(company_name, firstname, last_name, email, phone, fax, currency, terms, test, extent);
+			vendor.vendor_validations(company_name[i], first_name[i], last_name[i], email[i], phone[i], fax[i], currency[i], terms[i],test, extent);
+			}
+			
+
+			}
+			
 		}
+
 	}

@@ -20,6 +20,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.exceldataReader.ExcelReader;
+import com.qa.exceldataReader.ExcelReaderbycolumnname;
 import com.qa.functions.employee_functions;
 import com.qa.functions.vendorFunctions;
 import com.qa.pages.AuthPage;
@@ -34,6 +35,7 @@ public class EmployeeCreation extends TestBase {
 	ExtentTest test;
 	employee_functions emp;
 	AuthPage authpage;
+	String file_path="C:\\Users\\Sindhuja\\Desktop\\Employee_data.xlsx";
 
 	public void send_email() throws EmailException
 	{
@@ -96,27 +98,58 @@ public class EmployeeCreation extends TestBase {
 		reader = new ExcelReader();
 		return reader.readExcelData("C:\\Users\\Sindhuja\\Desktop\\Employee_data.xlsx", 1);
 	}
-	@Test(dataProvider = "employee_invalid_validations",priority=1)
-	public void employee_invalid_validations(String firstname,String last_name,String supervisior,String email,String phone,String fax) throws InterruptedException
+	@Test
+	public void employee_validations() throws IOException, InterruptedException
 	{
-		
+		ExcelReaderbycolumnname reader=new ExcelReaderbycolumnname();
+		String[] firstname=reader.excelReader(file_path, 0, "firstname");
+		String[] lastname=reader.excelReader(file_path, 0, "lastname");
+		String[] supervisior=reader.excelReader(file_path, 0, "supervisior");
+		String[] email=reader.excelReader(file_path, 0, "email");
+		String[] phone=reader.excelReader(file_path, 0, "phone");
+		String[] fax=reader.excelReader(file_path, 0, "fax");
+		String[] Type=reader.excelReader(file_path, 0, "Type");
+		for(int i=0;i<Type.length;i++)
+		{
+		if(Type[i].equals("valid"))
+		{
+			test=extent.createTest("Employee creation with giving data and without giving data");
+			authpage=new AuthPage();
+			emp=new employee_functions();
+			emp.employee_validations(firstname[i], lastname[i], supervisior[i], email[i], phone[i], fax[i], test);
+		}
+		else
+		{
 		test=extent.createTest("Employee creation with invalid data");
 		authpage=new AuthPage();
 		emp=new employee_functions();
-		emp.employee_invalid_validations(firstname, last_name, supervisior, email, phone, fax, test);
-	}
-	@DataProvider
-	public Object[][] employee_validations() throws IOException {
-		reader = new ExcelReader();
-		return reader.readExcelData("C:\\Users\\Sindhuja\\Desktop\\Employee_data.xlsx", 0);
-	}
-	@Test(dataProvider = "employee_validations",priority=1)
-	public void employee_validations(String firstname,String last_name,String supervisior,String email,String phone,String fax) throws InterruptedException
-	{
+		emp.employee_invalid_validations(firstname[i], lastname[i], supervisior[i], email[i], phone[i], fax[i], test);
+
+		}
+		}
 		
-		test=extent.createTest("Employee creation with giving data and without giving data");
-		authpage=new AuthPage();
-		emp=new employee_functions();
-		emp.employee_validations(firstname, last_name, supervisior, email, phone, fax, test);
 	}
+//	@Test(dataProvider = "employee_invalid_validations",priority=1)
+//	public void employee_invalid_validations(String firstname,String last_name,String supervisior,String email,String phone,String fax) throws InterruptedException
+//	{
+//		
+//		test=extent.createTest("Employee creation with invalid data");
+//		authpage=new AuthPage();
+//		emp=new employee_functions();
+//		emp.employee_invalid_validations(firstname, last_name, supervisior, email, phone, fax, test);
+//	}
+//	@DataProvider
+//	public Object[][] employee_validations() throws IOException {
+//		reader = new ExcelReader();
+//		return reader.readExcelData("C:\\Users\\Sindhuja\\Desktop\\Employee_data.xlsx", 0);
+//	}
+//	@Test(dataProvider = "employee_validations",priority=1)
+//	public void employee_validations(String firstname,String last_name,String supervisior,String email,String phone,String fax) throws InterruptedException
+//	{
+//		
+//		test=extent.createTest("Employee creation with giving data and without giving data");
+//		authpage=new AuthPage();
+//		emp=new employee_functions();
+//		emp.employee_validations(firstname, last_name, supervisior, email, phone, fax, test);
+//	}
 }

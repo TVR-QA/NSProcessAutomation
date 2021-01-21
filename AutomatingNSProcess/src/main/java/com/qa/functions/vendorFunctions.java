@@ -198,6 +198,7 @@ public class vendorFunctions extends TestBase{
 	}
 	public void vendor_invalid_validations(String company_name,String firstname,String last_name,String email,String phone,String fax,String currency,String terms,ExtentTest test) throws InterruptedException
 	{
+		
 		navigate_to_vendor();
 		this.company_name.sendKeys(company_name);
 		this.email.sendKeys(email);
@@ -263,9 +264,9 @@ public class vendorFunctions extends TestBase{
 		
 
 		
+		}
 		
-		
-	}
+	
 	
 
 }
